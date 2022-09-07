@@ -8,10 +8,10 @@
 package src.com.jr.vehicles;
 
 public class Vehicle {
-    private Integer numberOfWheels = 0;
+    protected Integer numberOfWheels = 0;
     private Boolean isVehicleInsured = false;
     private String fuelType = "";
-
+    protected String propulsionType = "";
 
     // Cobnstructors
 
@@ -20,10 +20,14 @@ public class Vehicle {
 
     }
 
-    public Vehicle (Integer numberOfWheels, Boolean isVehicleInsured, String fuelType) {
+    public Vehicle (Integer numberOfWheels, 
+                    Boolean isVehicleInsured, 
+                    String fuelType,
+                    String propulsionType) {
         this.numberOfWheels = numberOfWheels;
         this.isVehicleInsured = isVehicleInsured;
         this.fuelType = fuelType;
+        this.propulsionType = propulsionType;
     }
 
     // Getters
@@ -39,6 +43,10 @@ public class Vehicle {
         return this.fuelType;
     }
 
+    public String getPropulsionType(){
+        return this.propulsionType;
+    }
+
     // Setters
     public void setNumberOfWheels(Integer numberOfWheels){
         this.numberOfWheels = numberOfWheels;
@@ -50,5 +58,9 @@ public class Vehicle {
 
     public void setFuelType(String fuelType){
         this.fuelType = fuelType;
-    }    
+    }
+    
+    public void setPropulsionType(String propulsionType){
+        this.propulsionType = propulsionType;
+    }
 }

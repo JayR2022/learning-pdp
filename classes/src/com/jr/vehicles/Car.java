@@ -10,11 +10,15 @@ public class Car extends Vehicle{
     private String make;
     private String model;
     private static Integer totalCars = 0;
-    
+
     // car wheels is set to 4
     private static final Integer carWheels = 4;
 
     // Constructor
+    public Car(){
+
+    }
+
     public Car(String carMake, String carModel){
         this.make = carMake;
         this.model = carModel;
@@ -33,9 +37,10 @@ public class Car extends Vehicle{
         return totalCars;
     }
 
-    public Integer getCarWheels(){
-        this.setNumberOfWheels(carWheels);
-        return this.getNumberOfWheels();
+    // Polymorphic behabiour where the method of a parentclass is showing a different behavior; here the number of wheels for Car instances is always 4 as opposed to 0 in vehicle instances.
+    public Integer getNumberOfWheels(){
+        this.numberOfWheels = carWheels;
+        return this.numberOfWheels;
     }
 
     // Setters
