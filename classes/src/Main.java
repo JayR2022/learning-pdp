@@ -44,6 +44,19 @@ public class Main {
 
         System.out.println("First Vehicle total number of wheels: "+ firstVehicle.getNumberOfWheels());
 
+
+        // Abstraction - car object is implementing the abstract methods getFactoryLocation and setFactoryLocation by extending the abstract class Factory
+        firstCar.setFactoryLocation("GB");
+        secondCar.setFactoryLocation("Japan");
+        System.out.println("FirstCar Manufactured in: " + firstCar.getFactoryLocation());
+        System.out.println("SecondCar Manufactured in: " + secondCar.getFactoryLocation());
+        
+        // Abstraction using Interface, here Car is implementing the interface Registration contaning two methods checking for if its registered to fly and for road
+        System.out.println("FirstCar is registered to use on Road "+firstCar.isRegisteredForRoad());
+        System.out.println("FirstCar is registered for flying "+firstCar.isRegisteredForFlying());
+
+
+
         
     }
     

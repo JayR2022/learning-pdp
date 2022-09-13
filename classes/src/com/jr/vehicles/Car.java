@@ -5,7 +5,7 @@ package src.com.jr.vehicles;
 
 // We can set these variables private so they can only be accessed within a class and then create public methods of getters and setters to access them from outside the class.
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements Registration{
     // variables
     private String make;
     private String model;
@@ -13,6 +13,10 @@ public class Car extends Vehicle{
 
     // car wheels is set to 4
     private static final Integer carWheels = 4;
+
+    
+    private static boolean isRegisteredForFlying = false;
+    private static boolean isRegisteredForRoad = true;
 
     // Constructor
     public Car(){
@@ -41,6 +45,14 @@ public class Car extends Vehicle{
     public Integer getNumberOfWheels(){
         this.numberOfWheels = carWheels;
         return this.numberOfWheels;
+    }
+
+    public boolean isRegisteredForRoad(){
+        return isRegisteredForRoad;
+    }
+
+    public boolean isRegisteredForFlying(){
+        return isRegisteredForFlying;
     }
 
     // Setters

@@ -2,16 +2,19 @@
 // Vehicle is a superclass (parent) to the Car class which is a subclass (child) 
 // Car class will inherit all the variables and methods of the Vehicle class
 
-// Polymorphism
+// Polymorphism - can take many forms
+
+// Abstractions - hide the implementation details within modules and only share essential functionality.
 
 
 package src.com.jr.vehicles;
 
-public class Vehicle {
+public class Vehicle extends Factory {
     protected Integer numberOfWheels = 0;
     private Boolean isVehicleInsured = false;
     private String fuelType = "";
     protected String propulsionType = "";
+    private String factoryLocation = "";
 
     // Cobnstructors
 
@@ -47,6 +50,10 @@ public class Vehicle {
         return this.propulsionType;
     }
 
+    public String getFactoryLocation(){
+        return this.factoryLocation;
+    }
+
     // Setters
     public void setNumberOfWheels(Integer numberOfWheels){
         this.numberOfWheels = numberOfWheels;
@@ -63,4 +70,9 @@ public class Vehicle {
     public void setPropulsionType(String propulsionType){
         this.propulsionType = propulsionType;
     }
+
+    public void setFactoryLocation(String factoryLocation){
+        this.factoryLocation = factoryLocation;
+    }
+
 }
