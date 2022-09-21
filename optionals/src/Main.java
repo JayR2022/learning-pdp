@@ -1,6 +1,4 @@
-package src;
-
-import src.com.jr.shapes.Rectangle;
+import com.jr.shapes.Rectangle;
 
 public class Main {
 
@@ -14,9 +12,13 @@ public class Main {
     public static void main(String[] args){
 
         Rectangle newShape = new Rectangle(null,null);
+        Rectangle newNonNullRectangle = new Rectangle(190,450);
 
         System.out.println("Length: "+newShape.getLength());
         System.out.println("Width: "+newShape.getWidth());
+
+        System.out.println("New Rectangle Length: "+newNonNullRectangle.getLength());
+        System.out.println("New Rectangle Width: "+newNonNullRectangle.getWidth());
 
 
     }

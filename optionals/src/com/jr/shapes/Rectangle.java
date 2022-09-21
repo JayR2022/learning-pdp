@@ -1,4 +1,4 @@
-package src.com.jr.shapes;
+package com.jr.shapes;
 
 import java.util.Optional;
 
@@ -10,27 +10,26 @@ import java.util.Optional;
 
 public class Rectangle {
     private Optional <Integer> length;
-    private Integer width;
-    private Integer ifNullValue = 0;
+    private Optional <Integer> width;
 
-    public Rectangle(Optional<Integer> length, Integer width){
-        this.length = length;
-        this.width = width;
+    public Rectangle(Integer length, Integer width){
+        this.length = Optional.ofNullable(length);
+        this.width = Optional.ofNullable(width);
     }
 
     public Optional<Integer> getLength(){
-        return Optional.ofNullable(this.length).orElse(ifNullValue);
+        return this.length;
     }
 
     public Optional<Integer> getWidth(){
-        return Optional.of(this.width);
+        return this.width;
     }
 
-    public void setLength(Integer length){
+    public void setLength(Optional <Integer> length){
         this.length = length;
     }
 
-    public void setWidth(Integer width){
+    public void setWidth(Optional <Integer> width){
         this.width = width;
     }
 
